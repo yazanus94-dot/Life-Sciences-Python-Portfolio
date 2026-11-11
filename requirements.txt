@@ -1,0 +1,11 @@
+# Core scientific Python stack (covers most project pipelines/tests)
+numpy>=1.24
+scipy>=1.10
+pandas>=2.0
+matplotlib>=3.7
+seaborn>=0.12
+statsmodels>=0.14
+scikit-learn>=1.3
+lifelines>=0.27
+mne>=1.5
+pytest>=7.0

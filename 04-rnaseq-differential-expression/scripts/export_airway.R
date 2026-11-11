@@ -1,0 +1,10 @@
+# Run once in R to export the airway count matrix (Himes et al. 2014, GEO GSE52778).
+# install.packages("BiocManager"); BiocManager::install(c("airway", "org.Hs.eg.db"))
+library(airway); library(org.Hs.eg.db)
+data(airway)
+counts <- assay(airway)
+sym <- mapIds(org.Hs.eg.db, rownames(counts), "SYMBOL", "ENSEMBL")
+rownames(counts) <- ifelse(is.na(sym), rownames(counts), sym)
+dir.create("data", showWarnings = FALSE)
+write.csv(counts, "data/airway_counts.csv")
+write.csv(as.data.frame(colData(airway))[, c("cell", "dex")], "data/airway_coldata.csv")

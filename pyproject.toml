@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "life-sciences-python-portfolio"
+version = "0.1.0"
+description = "Portfolio of Python projects in biomedical signal analysis, survival/risk modeling, pharmacokinetics, RNA-seq analysis, and population genetics simulation."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Yazan Aljabari"}]
+
+[tool.pytest.ini_options]
+testpaths = [
+  "01-eeg-sleep-band-power/tests",
+  "02-heart-failure-survival-prediction/tests",
+  "03-pharmacokinetic-modeling/tests",
+  "04-rnaseq-differential-expression/tests",
+  "05-wright-fisher-evolution-simulator/tests",
+]

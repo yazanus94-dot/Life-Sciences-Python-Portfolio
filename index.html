@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Life Sciences Python Portfolio — Yazan Aljabari</title>
+  <meta name="description" content="Portfolio of Python projects in biomedical signal analysis, survival/risk modeling, pharmacokinetics, RNA-seq analysis, and population genetics simulation." />
+  <style>
+    :root {
+      --bg: #0b1020; --panel: #121a33; --panel2:#0f1730; --text: #e6edf7; --muted:#a8b3cf;
+      --accent:#4f8cff; --accent2:#22c55e; --border:#22305a; --chip:#1a2547;
+    }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; background: linear-gradient(180deg,#0b1020 0%, #0a0f1d 100%); color:var(--text); line-height:1.55; }
+    a { color:#8bb6ff; text-decoration:none; } a:hover { text-decoration:underline; }
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 32px 20px 56px; }
+    .hero { background: radial-gradient(1200px 400px at 10% -10%, rgba(79,140,255,.25), transparent), linear-gradient(180deg, rgba(18,26,51,.95), rgba(15,23,48,.95)); border:1px solid var(--border); border-radius:18px; padding:28px; box-shadow: 0 20px 50px rgba(0,0,0,.25); }
+    h1 { margin:0 0 8px; font-size: clamp(1.8rem, 3vw, 2.6rem); letter-spacing:.2px; }
+    .subtitle { color:var(--muted); margin:0 0 18px; font-size:1.05rem; max-width: 900px; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .chip { background:var(--chip); border:1px solid var(--border); color:#dce7ff; padding:6px 10px; border-radius:999px; font-size:.9rem; }
+    .actions { margin-top:18px; display:flex; flex-wrap:wrap; gap:10px; }
+    .btn { display:inline-block; padding:10px 14px; border-radius:10px; border:1px solid var(--border); background:#172247; color:#fff; font-weight:600; }
+    .btn.primary { background:var(--accent); border-color:#5b93ff; color:#081225; }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:14px; margin-top:22px; }
+    .card { background:linear-gradient(180deg, rgba(18,26,51,.9), rgba(15,23,48,.9)); border:1px solid var(--border); border-radius:14px; padding:16px; }
+    .card h3 { margin:0 0 6px; font-size:1.05rem; }
+    .card p { margin:0 0 10px; color:var(--muted); font-size:.95rem; }
+    .tag { display:inline-block; font-size:.78rem; color:#cfe0ff; background:#162449; border:1px solid #27406f; padding:2px 8px; border-radius:999px; margin:0 6px 6px 0; }
+    section { margin-top:26px; }
+    h2 { font-size:1.25rem; margin:0 0 10px; }
+    .panel { background:rgba(18,26,51,.7); border:1px solid var(--border); border-radius:14px; padding:16px; }
+    ul { margin:8px 0 0 20px; color:var(--muted); }
+    li { margin:4px 0; }
+    .cols { display:grid; grid-template-columns: 1.2fr .8fr; gap:14px; }
+    @media (max-width: 860px){ .cols{ grid-template-columns:1fr; } }
+    .kpi { display:grid; grid-template-columns: repeat(auto-fit,minmax(180px,1fr)); gap:10px; }
+    .kpi .item { background:var(--panel2); border:1px solid var(--border); border-radius:12px; padding:12px; }
+    .kpi .n { font-size:1.2rem; font-weight:700; color:#fff; }
+    .kpi .l { color:var(--muted); font-size:.9rem; }
+    footer { margin-top:28px; color:var(--muted); font-size:.92rem; border-top:1px solid var(--border); padding-top:16px; }
+    code { background:#101a36; border:1px solid #22305a; padding:1px 6px; border-radius:6px; color:#dce7ff; }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="hero">
+      <h1>Life Sciences Python Portfolio</h1>
+      <p class="subtitle">Five evidence-oriented Python projects across biomedical signal analysis, clinical survival/risk modeling, pharmacokinetics, RNA-seq differential expression, and population-genetics simulation — with reproducible pipelines, tests, and transparent reporting.</p>
+      <div class="meta">
+        <span class="chip"><strong>Author:</strong>&nbsp;Yazan Aljabari</span>
+        <span class="chip"><strong>License:</strong>&nbsp;MIT</span>
+        <span class="chip"><strong>Stack:</strong>&nbsp;Python · NumPy · SciPy · pandas · scikit-learn · lifelines · MNE</span>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="README.md">Read the README</a>
+        <a class="btn" href="docs/results.md">Results dashboard</a>
+        <a class="btn" href="https://www.linkedin.com/in/yazan-aljabari-878202139/">LinkedIn</a>
+      </div>
+    </header>
+
+    <section>
+      <div class="kpi">
+        <div class="item"><div class="n">5</div><div class="l">Independent, documented projects</div></div>
+        <div class="item"><div class="n">Reproducible</div><div class="l">Scripts, tests, and synthetic demo modes where applicable</div></div>
+        <div class="item"><div class="n">Method-focused</div><div class="l">Inference validity, leakage safety, calibration, theory checks</div></div>
+        <div class="item"><div class="n">Transparent</div><div class="l">Included artifacts reported; no fabricated real results</div></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="grid">
+        <article class="card">
+          <h3><a href="01-eeg-sleep-band-power/">01 · EEG Sleep Band Power</a></h3>
+          <p>Spectral analysis of overnight EEG across sleep stages with subject-level statistics and FDR control.</p>
+          <div><span class="tag">MNE</span><span class="tag">Welch PSD</span><span class="tag">FDR</span><span class="tag">PhysioNet</span></div>
+        </article>
+        <article class="card">
+          <h3><a href="02-heart-failure-survival-prediction/">02 · Heart Failure Survival Prediction</a></h3>
+          <p>Kaplan–Meier/Cox analysis and leakage-safe risk prediction with calibration and explicit leakage checks.</p>
+          <div><span class="tag">lifelines</span><span class="tag">Cox PH</span><span class="tag">Calibration</span><span class="tag">Leakage-safe CV</span></div>
+        </article>
+        <article class="card">
+          <h3><a href="03-pharmacokinetic-modeling/">03 · Pharmacokinetic Modeling</a></h3>
+          <p>Oral theophylline 1-/2-compartment modeling with AICc, NCA cross-checks, bootstrap CIs, and superposition.</p>
+          <div><span class="tag">PK/ODE</span><span class="tag">AICc</span><span class="tag">Bootstrap</span><span class="tag">NCA</span></div>
+        </article>
+        <article class="card">
+          <h3><a href="04-rnaseq-differential-expression/">04 · RNA-seq Differential Expression</a></h3>
+          <p>Paired bulk RNA-seq pipeline with median-of-ratios normalization, NB-GLM, Wald tests, and FDR control.</p>
+          <div><span class="tag">NB-GLM</span><span class="tag">Median-of-ratios</span><span class="tag">BH-FDR</span><span class="tag">Paired design</span></div>
+        </article>
+        <article class="card">
+          <h3><a href="05-wright-fisher-evolution-simulator/">05 · Wright–Fisher Evolution Simulator</a></h3>
+          <p>Vectorized drift/selection simulation validated against Kimura fixation, fixation-time, and heterozygosity theory.</p>
+          <div><span class="tag">Simulation</span><span class="tag">Kimura theory</span><span class="tag">Statistics</span><span class="tag">Population genetics</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="cols">
+      <div class="panel">
+        <h2>Quick start</h2>
+        <ul>
+          <li>Create an environment and install: <code>pip install -r requirements.txt</code></li>
+          <li>Run tests: <code>pytest</code></li>
+          <li>Explore per-project demos (e.g. <code>--synthetic</code>) and included result artifacts in PK and Wright–Fisher projects.</li>
+          <li>See <a href="docs/results.md">docs/results.md</a> for the consolidated included-artifacts dashboard.</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h2>Highlights</h2>
+        <ul>
+          <li>Correct units of inference (subject-level EEG analysis)</li>
+          <li>Leakage-aware ML pipelines and calibration checks</li>
+          <li>Model comparison and identifiability awareness (PK)</li>
+          <li>Robust normalization and multiplicity control (RNA-seq)</li>
+          <li>Theory-validated stochastic simulation (WF)</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <div><strong>Yazan Aljabari</strong> · <a href="https://www.linkedin.com/in/yazan-aljabari-878202139/">LinkedIn</a> · MIT License</div>
+      <div style="margin-top:6px">Educational/methodological portfolio. Included results reflect repository artifacts only; real-data runs depend on external datasets and user execution as documented per project.</div>
+    </footer>
+  </main>
+</body>
+</html>

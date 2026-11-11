@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build / dist
+*.egg-info/
+dist/
+build/
+build_local/
+
+# Local data caches (large/raw downloads)
+data/raw/
+.mne-data/
+
+# Secrets/temp
+.token
+*.pem
+*.key
+.env
+.env.*

@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420" font-family="Arial, Helvetica, sans-serif">
+  <style>
+    .title{font:700 18px sans-serif; fill:#0f172a}
+    .sub{font:12px sans-serif; fill:#475569}
+    .label{font:12px sans-serif; fill:#334155}
+    .tick{font:11px sans-serif; fill:#475569}
+    .grid{stroke:#e2e8f0; stroke-width:1}
+    .axis{stroke:#64748b; stroke-width:1.2}
+  </style>
+  <rect width="100%" height="100%" fill="#ffffff"/>
+  <text x="30" y="34" class="title">Wright–Fisher fixation probability vs Kimura theory (included simulation)</text>
+  <text x="30" y="54" class="sub">N=50, 20,000 replicates per s, seed 42 — bars: estimate (95% Clopper–Pearson CI), diamonds: Kimura prediction</text>
+
+  <g transform="translate(90,80)">
+    <!-- axes -->
+    <line x1="0" y1="260" x2="760" y2="260" class="axis"/>
+    <line x1="0" y1="0" x2="0" y2="260" class="axis"/>
+    <!-- y grid/ticks 0..0.20 -> 260px -->
+    <g class="tick">
+      <line x1="0" y1="260" x2="760" y2="260" class="grid"/><text x="-10" y="264" text-anchor="end">0.00</text>
+      <line x1="0" y1="195" x2="760" y2="195" class="grid"/><text x="-10" y="199" text-anchor="end">0.05</text>
+      <line x1="0" y1="130" x2="760" y2="130" class="grid"/><text x="-10" y="134" text-anchor="end">0.10</text>
+      <line x1="0" y1="65"  x2="760" y2="65"  class="grid"/><text x="-10" y="69"  text-anchor="end">0.15</text>
+      <line x1="0" y1="0"   x2="760" y2="0"   class="grid"/><text x="-10" y="4"   text-anchor="end">0.20</text>
+    </g>
+
+    <!-- helper: y = 260 - p/0.20*260 -->
+    <!-- s=0.00 x=80: est 0.0111 y=245.57, ci [0.009694,0.01265], kimura 0.01 y=247 -->
+    <g>
+      <text x="80" y="285" text-anchor="middle" class="label">s=0.00</text>
+      <rect x="55" y="245.6" width="50" height="14.4" fill="#2563eb" rx="3"/>
+      <line x1="80" y1="243.6" x2="80" y2="247.4" stroke="#0f172a" stroke-width="2"/>
+      <line x1="72" y1="243.6" x2="88" y2="243.6" stroke="#0f172a" stroke-width="2"/>
+      <line x1="72" y1="247.4" x2="88" y2="247.4" stroke="#0f172a" stroke-width="2"/>
+      <polygon points="80,241 86,247 80,253 74,247" fill="#ef4444"/>
+    </g>
+    <!-- s=0.01 x=230: est 0.0231 y=229.97, ci [0.02106,0.02528], kimura 0.0229 y=230.23 -->
+    <g>
+      <text x="230" y="285" text-anchor="middle" class="label">s=0.01</text>
+      <rect x="205" y="230.0" width="50" height="30.0" fill="#2563eb" rx="3"/>
+      <line x1="230" y1="227.1" x2="230" y2="232.6" stroke="#0f172a" stroke-width="2"/>
+      <line x1="222" y1="227.1" x2="238" y2="227.1" stroke="#0f172a" stroke-width="2"/>
+      <line x1="222" y1="232.6" x2="238" y2="232.6" stroke="#0f172a" stroke-width="2"/>
+      <polygon points="230,224.2 236,230.2 230,236.2 224,230.2" fill="#ef4444"/>
+    </g>
+    <!-- s=0.02 x=380: est 0.03955 y=208.59, ci [0.03689,0.04234], kimura 0.03994 y=208.08 -->
+    <g>
+      <text x="380" y="285" text-anchor="middle" class="label">s=0.02</text>
+      <rect x="355" y="208.6" width="50" height="51.4" fill="#2563eb" rx="3"/>
+      <line x1="380" y1="205.0" x2="380" y2="212.0" stroke="#0f172a" stroke-width="2"/>
+      <line x1="372" y1="205.0" x2="388" y2="205.0" stroke="#0f172a" stroke-width="2"/>
+      <line x1="372" y1="212.0" x2="388" y2="212.0" stroke="#0f172a" stroke-width="2"/>
+      <polygon points="380,202.1 386,208.1 380,214.1 374,208.1" fill="#ef4444"/>
+    </g>
+    <!-- s=0.05 x=530: est 0.0954 y=135.98, ci [0.09136,0.09956], kimura 0.09517 y=136.28 -->
+    <g>
+      <text x="530" y="285" text-anchor="middle" class="label">s=0.05</text>
+      <rect x="505" y="136.0" width="50" height="124.0" fill="#2563eb" rx="3"/>
+      <line x1="530" y1="130.6" x2="530" y2="141.2" stroke="#0f172a" stroke-width="2"/>
+      <line x1="522" y1="130.6" x2="538" y2="130.6" stroke="#0f172a" stroke-width="2"/>
+      <line x1="522" y1="141.2" x2="538" y2="141.2" stroke="#0f172a" stroke-width="2"/>
+      <polygon points="530,130.3 536,136.3 530,142.3 524,136.3" fill="#ef4444"/>
+    </g>
+    <!-- s=0.10 x=680: est 0.1766 y=30.42, ci [0.17134,0.18196], kimura 0.18127 y=24.35 -->
+    <g>
+      <text x="680" y="285" text-anchor="middle" class="label">s=0.10</text>
+      <rect x="655" y="30.4" width="50" height="229.6" fill="#2563eb" rx="3"/>
+      <line x1="680" y1="23.5" x2="680" y2="37.3" stroke="#0f172a" stroke-width="2"/>
+      <line x1="672" y1="23.5" x2="688" y2="23.5" stroke="#0f172a" stroke-width="2"/>
+      <line x1="672" y1="37.3" x2="688" y2="37.3" stroke="#0f172a" stroke-width="2"/>
+      <polygon points="680,18.4 686,24.4 680,30.4 674,24.4" fill="#ef4444"/>
+    </g>
+
+    <text x="-45" y="130" transform="rotate(-90 -45,130)" text-anchor="middle" class="label">Fixation probability</text>
+    <text x="380" y="315" text-anchor="middle" class="label">Selection coefficient (s)</text>
+  </g>
+
+  <g transform="translate(120,390)">
+    <rect x="0" y="-12" width="16" height="12" fill="#2563eb" rx="2"/><text x="22" y="-2" class="sub">Simulation estimate (95% CI)</text>
+    <polygon points="260,-6 266,0 260,6 254,0" fill="#ef4444"/><text x="272" y="4" class="sub">Kimura diffusion prediction (all inside CI in included run)</text>
+  </g>
+</svg>
